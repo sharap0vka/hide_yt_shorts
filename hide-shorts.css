@@ -1,0 +1,32 @@
+﻿/* Hide Shorts surfaces immediately at document_start to avoid flicker. */
+html:not([data-hide-youtube-shorts="off"]) ytd-reel-shelf-renderer,
+html:not([data-hide-youtube-shorts="off"]) ytd-rich-section-renderer[section-identifier="shorts_shelf"],
+html:not([data-hide-youtube-shorts="off"]) ytd-rich-section-renderer:has(ytd-reel-shelf-renderer),
+html:not([data-hide-youtube-shorts="off"]) ytd-rich-section-renderer:has(ytm-shorts-lockup-view-model),
+html:not([data-hide-youtube-shorts="off"]) ytd-rich-section-renderer:has(ytm-shorts-lockup-view-model-v2),
+html:not([data-hide-youtube-shorts="off"]) ytd-rich-shelf-renderer:has(ytm-shorts-lockup-view-model),
+html:not([data-hide-youtube-shorts="off"]) ytd-rich-shelf-renderer:has(ytm-shorts-lockup-view-model-v2),
+html:not([data-hide-youtube-shorts="off"]) ytd-rich-shelf-renderer:has(a[href*="/shorts"]),
+html:not([data-hide-youtube-shorts="off"]) ytd-rich-item-renderer:has(ytm-shorts-lockup-view-model),
+html:not([data-hide-youtube-shorts="off"]) ytd-rich-item-renderer:has(ytm-shorts-lockup-view-model-v2),
+html:not([data-hide-youtube-shorts="off"]) ytd-rich-item-renderer:has(a[href*="/shorts"]),
+html:not([data-hide-youtube-shorts="off"]) ytd-reel-video-renderer {
+  display: none !important;
+}
+
+html:not([data-hide-youtube-shorts="off"]) ytd-guide-entry-renderer:has(a[href^="/shorts"]),
+html:not([data-hide-youtube-shorts="off"]) ytd-mini-guide-entry-renderer:has(a[href^="/shorts"]),
+html:not([data-hide-youtube-shorts="off"]) ytd-guide-entry-renderer:has(#endpoint[title*="shorts" i]),
+html:not([data-hide-youtube-shorts="off"]) ytd-mini-guide-entry-renderer:has(#endpoint[title*="shorts" i]),
+html:not([data-hide-youtube-shorts="off"]) tp-yt-paper-item:has(a[href^="/shorts"]),
+html:not([data-hide-youtube-shorts="off"]) tp-yt-paper-item:has(#endpoint[title*="shorts" i]) {
+  display: none !important;
+}
+
+html:not([data-hide-youtube-shorts="off"]) yt-chip-cloud-chip-renderer:has(a[href*="/shorts"]),
+html:not([data-hide-youtube-shorts="off"]) ytd-button-renderer:has(a[href^="/shorts"]),
+html:not([data-hide-youtube-shorts="off"]) #endpoint[href^="/shorts"],
+html:not([data-hide-youtube-shorts="off"]) a[href^="https://www.youtube.com/shorts"],
+html:not([data-hide-youtube-shorts="off"]) a[href^="/shorts"] {
+  display: none !important;
+}
